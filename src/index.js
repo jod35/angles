@@ -34,7 +34,9 @@ const App =()=>{
     return(
         <div className="app">
             <h1>Articles</h1>
-            <SignUpForm/>
+            <SignUpForm onNewArticle={
+                (article)=>setArticles(currentArticles=>[...currentArticles,article])}
+            />
             <SearchForm onSearch={handleSearch} search={searchTerm}/>
             <Articles list={searchedArticles} />
         </div>

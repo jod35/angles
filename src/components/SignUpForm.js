@@ -35,6 +35,9 @@ const SignUpForm=({onNewArticle})=>{
         .catch(error=>console.log(error))
 
         onNewArticle(article)
+
+        setUsername('')
+        setEmail('')
     }
     return (
         <div className="search-form">
